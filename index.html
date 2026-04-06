@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wateright Plumbing — Riverside's trusted drain cleaning, rooter service, and plumbing repair experts. Same day service, upfront pricing, available 7 days a week. Call 909-577-3319.">
+  <meta name="keywords" content="drain cleaning Riverside CA, plumber Riverside, rooter service Inland Empire, clogged drain Riverside, plumbing repair Riverside CA, drain cleaning Corona, drain cleaning Moreno Valley">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Wateright Plumbing | Drain Cleaning & Plumbing Repair — Riverside CA">
+  <meta property="og:description" content="Same day drain cleaning and plumbing repair in Riverside & the Inland Empire. Local, honest, affordable. Call 909-577-3319.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.waterightplumbing.com">
+  <title>Wateright Plumbing | Drain Cleaning & Plumbing Repair — Riverside CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0f2040;
+      --blue: #1a6b8a;
+      --blue-light: #2196c4;
+      --cyan: #00b4d8;
+      --cyan-bright: #00d4ff;
+      --white: #ffffff;
+      --off-white: #f0f4f8;
+      --gray: #8a9bb0;
+      --text: #d0dce8;
+      --gold: #f0a500;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 72px;
+      background: rgba(10,22,40,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,180,216,0.15);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+    }
+
+    .nav-logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--cyan); }
+
+    .nav-cta {
+      background: var(--cyan);
+      color: var(--navy) !important;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-weight: 700 !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--cyan-bright) !important;
+      transform: translateY(-1px);
+      color: var(--navy) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 40px 60px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(26,107,138,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 20% 80%, rgba(0,180,216,0.1) 0%, transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,180,216,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,216,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,180,216,0.1);
+      border: 1px solid rgba(0,180,216,0.3);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--cyan);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.5); }
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 800;
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 20px;
+      animation: fadeInUp 0.6s 0.1s ease both;
+    }
+
+    .hero h1 .accent { color: var(--cyan); }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.6s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cyan);
+      color: var(--navy);
+      padding: 16px 32px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 24px rgba(0,180,216,0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--cyan-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,180,216,0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0,180,216,0.05);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeInUp 0.6s 0.4s ease both;
+    }
+
+    .hero-stat { text-align: left; }
+
+    .hero-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-stat-num span { color: var(--cyan); }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Hero right card */
+    .hero-card {
+      background: rgba(15,32,64,0.8);
+      border: 1px solid rgba(0,180,216,0.2);
+      border-radius: 16px;
+      padding: 36px;
+      backdrop-filter: blur(12px);
+      animation: fadeInRight 0.7s 0.3s ease both;
+    }
+
+    .hero-card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .hero-card-sub {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .service-list li::before {
+      content: '✓';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: rgba(0,180,216,0.15);
+      border: 1px solid rgba(0,180,216,0.3);
+      border-radius: 50%;
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .hero-card-cta {
+      display: block;
+      text-align: center;
+      background: var(--cyan);
+      color: var(--navy);
+      padding: 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+    }
+
+    .hero-card-cta:hover {
+      background: var(--cyan-bright);
+      transform: translateY(-1px);
+    }
+
+    .hero-card-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-top: 10px;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--blue);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+
+    .trust-icon { font-size: 1rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 40px; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section-title .accent { color: var(--cyan); }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--navy-mid); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .service-card {
+      background: rgba(10,22,40,0.8);
+      border: 1px solid rgba(0,180,216,0.12);
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(0,180,216,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .service-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    /* ── WHY US ── */
+    #why {
+      background: var(--navy);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .why-feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .why-feature-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(0,180,216,0.1);
+      border: 1px solid rgba(0,180,216,0.25);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .why-feature-text h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .why-feature-text p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .why-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .why-callout {
+      background: linear-gradient(135deg, rgba(26,107,138,0.3), rgba(0,180,216,0.1));
+      border: 1px solid rgba(0,180,216,0.2);
+      border-radius: 16px;
+      padding: 36px;
+    }
+
+    .why-callout-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .why-callout-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .why-promise {
+      background: rgba(15,32,64,0.6);
+      border: 1px solid rgba(0,180,216,0.15);
+      border-radius: 12px;
+      padding: 24px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .why-promise strong { color: var(--white); }
+
+    /* ── AREAS ── */
+    #areas { background: var(--navy-mid); }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .area-chip {
+      background: rgba(10,22,40,0.8);
+      border: 1px solid rgba(0,180,216,0.15);
+      border-radius: 8px;
+      padding: 16px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .area-chip:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0,180,216,0.05);
+    }
+
+    /* ── REVIEWS ── */
+    #reviews { background: var(--navy); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .review-card {
+      background: rgba(15,32,64,0.6);
+      border: 1px solid rgba(0,180,216,0.12);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .review-location {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--navy-mid) 100%);
+      padding: 100px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,180,216,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,216,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .cta-section .container { position: relative; }
+
+    .cta-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-phone {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--cyan);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+
+    .cta-phone:hover { color: var(--cyan-bright); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060e1a;
+      padding: 60px 40px 32px;
+      border-top: 1px solid rgba(0,180,216,0.1);
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.87rem;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.87rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-item:hover { color: var(--cyan); }
+
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col ul a {
+      font-size: 0.87rem;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover { color: var(--cyan); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(24px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 72px; left: 0; right: 0;
+        background: var(--navy-mid);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid rgba(0,180,216,0.15);
+      }
+
+      .hero { padding: 100px 20px 60px; }
+      .hero-content { grid-template-columns: 1fr; gap: 40px; }
+      .hero-card { display: none; }
+      .hero-stats { gap: 20px; }
+
+      section { padding: 70px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .trust-bar { gap: 20px; padding: 16px 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Wateright Plumbing",
+    "image": "https://www.waterightplumbing.com/logo.png",
+    "url": "https://www.waterightplumbing.com",
+    "telephone": "+19095773319",
+    "email": "info@waterightplumbing.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Riverside",
+      "addressRegion": "CA",
+      "postalCode": "92507",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.9381,
+      "longitude": -117.3298
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "07:00", "closes": "21:00" }
+    ],
+    "priceRange": "$$",
+    "description": "Wateright Plumbing offers drain cleaning, rooter service, and minor plumbing repairs in Riverside CA and the Inland Empire. Same day service, upfront pricing, available 7 days a week.",
+    "areaServed": ["Riverside","Moreno Valley","Corona","Jurupa Valley","Perris","Norco","Eastvale","Fontana"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo-nav.png" alt="Wateright Plumbing Logo">
+      <div class="nav-logo-text">
+        WATERIGHT
+        <span>Plumbing</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tel:9095773319" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">Riverside & Inland Empire</div>
+        <h1>Drain Problems?<br><span class="accent">We Fix It Fast.</span></h1>
+        <p class="hero-sub">Wateright Plumbing delivers same day drain cleaning, rooter service, and plumbing repairs across Riverside and the Inland Empire. Honest pricing. No surprises. We answer the phone.</p>
+        <div class="hero-actions">
+          <a href="tel:9095773319" class="btn-primary">📞 909-577-3319</a>
+          <a href="services.html" class="btn-secondary">View Services →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">7<span>days</span></div>
+            <div class="hero-stat-label">Always Open</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span>$</span>79</div>
+            <div class="hero-stat-label">Starting Price</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">Same<span>Day</span></div>
+            <div class="hero-stat-label">Service Available</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Get Fast Service Today</div>
+        <div class="hero-card-sub">We serve all of Riverside & surrounding areas</div>
+        <ul class="service-list">
+          <li>Drain Cleaning & Rooter Service</li>
+          <li>Main Line Clearing</li>
+          <li>Toilet & Sink Repairs</li>
+          <li>Garbage Disposal Service</li>
+          <li>Water Heater Maintenance</li>
+          <li>Minor Plumbing Repairs</li>
+        </ul>
+        <a href="tel:9095773319" class="hero-card-cta">Call 909-577-3319</a>
+        <p class="hero-card-note">Available Monday–Sunday, 7am–9pm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">⚡</span> Same Day Service</div>
+    <div class="trust-item"><span class="trust-icon">💰</span> Upfront Pricing</div>
+    <div class="trust-item"><span class="trust-icon">📞</span> Always Answer</div>
+    <div class="trust-item"><span class="trust-icon">🏠</span> Locally Owned</div>
+    <div class="trust-item"><span class="trust-icon">⭐</span> 5-Star Rated</div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Expert Plumbing Services<br><span class="accent">Built Around You</span></h2>
+        <p class="section-desc">From clogged drains to minor plumbing repairs, we handle it fast and affordably. No big company markup — just honest local service.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🔧</div>
+          <h3>Drain Cleaning</h3>
+          <p>Kitchen sinks, bathroom drains, tub and shower backups. We snake, clear, and get your water flowing fast.</p>
+          <div class="service-price">Starting at $79</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🌀</div>
+          <h3>Rooter Service</h3>
+          <p>Main line blockages, root intrusion, and serious clogs. Our floor snake handles what others can't.</p>
+          <div class="service-price">Starting at $150</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🚽</div>
+          <h3>Toilet Repair & Unclog</h3>
+          <p>Clogged, running, or leaking toilets. Fast auger service and minor repairs to get things back to normal.</p>
+          <div class="service-price">Starting at $99</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔩</div>
+          <h3>Minor Plumbing Repairs</h3>
+          <p>Faucet repairs, angle stops, supply lines, shower cartridges, and small leaks handled quickly.</p>
+          <div class="service-price">Call for Quote</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">♻️</div>
+          <h3>Garbage Disposal</h3>
+          <p>Jammed or not working? We service and repair garbage disposals same day so your kitchen stays functional.</p>
+          <div class="service-price">Starting at $85</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔥</div>
+          <h3>Water Heater Maintenance</h3>
+          <p>Flushing, inspections, and basic maintenance to extend the life of your water heater and keep it running efficiently.</p>
+          <div class="service-price">Starting at $85</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="reveal">
+          <div class="section-label">Why Wateright</div>
+          <h2 class="section-title">The Local Difference<br><span class="accent">You Can Feel</span></h2>
+          <p class="section-desc" style="margin-bottom:40px;">We're not a franchise. We're your neighbor — and we treat every job like it's our own home.</p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon">📞</div>
+              <div class="why-feature-text">
+                <h4>We Actually Pick Up</h4>
+                <p>No call centers, no hold music. Call or text Jason directly and get a real answer fast.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">💰</div>
+              <div class="why-feature-text">
+                <h4>Upfront Honest Pricing</h4>
+                <p>You know the price before we start. No hidden fees, no surprise charges at the end.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">⚡</div>
+              <div class="why-feature-text">
+                <h4>Same Day Availability</h4>
+                <p>Drain problems don't wait and neither do we. Same day and next day service available.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">🧹</div>
+              <div class="why-feature-text">
+                <h4>Clean & Professional</h4>
+                <p>We clean up after every job and leave your home exactly as we found it — or better.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-right reveal">
+          <div class="why-callout">
+            <div class="why-callout-num">7</div>
+            <div class="why-callout-text">Days a week, 7am to 9pm. When you need us we're here — including weekends when most plumbers aren't available.</div>
+          </div>
+          <div class="why-promise">
+            <strong>Our Promise:</strong> If we can't fix it or it's beyond our scope, we'll tell you honestly and point you in the right direction. No runaround, no upsell, no wasted time.
+          </div>
+          <a href="tel:9095773319" class="btn-primary" style="justify-content:center; margin-top:8px;">Get Same Day Service →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section id="areas">
+    <div class="container">
+      <div class="reveal" style="text-align:center; margin-bottom:0;">
+        <div class="section-label">Service Area</div>
+        <h2 class="section-title">Serving Riverside &<br><span class="accent">The Inland Empire</span></h2>
+        <p class="section-desc" style="margin: 0 auto;">We cover all of Riverside and surrounding cities. Not sure if we serve your area? Call us — chances are we do.</p>
+      </div>
+      <div class="areas-grid reveal">
+        <div class="area-chip">Riverside</div>
+        <div class="area-chip">Moreno Valley</div>
+        <div class="area-chip">Corona</div>
+        <div class="area-chip">Jurupa Valley</div>
+        <div class="area-chip">Perris</div>
+        <div class="area-chip">Norco</div>
+        <div class="area-chip">Eastvale</div>
+        <div class="area-chip">Fontana</div>
+        <div class="area-chip">Colton</div>
+        <div class="area-chip">San Bernardino</div>
+        <div class="area-chip">Redlands</div>
+        <div class="area-chip">Temecula</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Riverside Is<br><span class="accent">Saying About Us</span></h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Very professional, came to clear out my main line, was fast and efficient. Cleaned up after and made it as if nothing was ever wrong. Would definitely recommend."</p>
+          <div class="review-author">Riverside Resident</div>
+          <div class="review-location">Riverside, CA · Google Review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Big shout out to Wateright. Called in to get some work done on backed up drains and the team was very accommodating and professional. Pricing was affordable and they were in and out with ease."</p>
+          <div class="review-author">Satisfied Customer</div>
+          <div class="review-location">Riverside, CA · Google Review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Fast, affordable, and honest. Jason showed up on time and got the job done without any surprises on the bill. This is my go-to plumber from now on."</p>
+          <div class="review-author">Local Homeowner</div>
+          <div class="review-location">Inland Empire · Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="container">
+      <h2>Got a Clogged Drain?<br>Call Us Right Now.</h2>
+      <p>Same day service available. We answer every call, 7 days a week.</p>
+      <a href="tel:9095773319" class="cta-phone">909-577-3319</a>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:9095773319" class="btn-primary">📞 Call Now</a>
+        <a href="contact.html" class="btn-secondary">Send a Message</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+          <img src="logo-footer.png" alt="Wateright Plumbing" style="width:60px;height:60px;border-radius:50%;">
+          <h3 style="margin-bottom:0;">WATERIGHT PLUMBING</h3>
+        </div>
+        <p>Drain cleaning, rooter service, and plumbing repairs serving Riverside and the Inland Empire. Locally owned, honestly priced, always available.</p>
+        <a href="tel:9095773319" class="footer-contact-item">📞 909-577-3319</a>
+        <a href="mailto:info@waterightplumbing.com" class="footer-contact-item">✉️ info@waterightplumbing.com</a>
+        <span class="footer-contact-item">📍 Riverside, CA 92507</span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Drain Cleaning</a></li>
+          <li><a href="services.html">Rooter Service</a></li>
+          <li><a href="services.html">Toilet Repair</a></li>
+          <li><a href="services.html">Plumbing Repairs</a></li>
+          <li><a href="services.html">Garbage Disposal</a></li>
+          <li><a href="services.html">Water Heater</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><a>Mon–Fri: 7am–9pm</a></li>
+          <li><a>Saturday: 7am–9pm</a></li>
+          <li><a>Sunday: 7am–9pm</a></li>
+          <li><a style="color:var(--cyan)">Same Day Available</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Wateright Plumbing. All rights reserved.</span>
+      <span>Serving Riverside, CA & the Inland Empire</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

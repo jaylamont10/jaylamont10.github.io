@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wateright Plumbing services — drain cleaning, rooter service, toilet repair, minor plumbing repairs, garbage disposal, and water heater maintenance in Riverside CA. Call 909-577-3319.">
+  <meta name="keywords" content="drain cleaning Riverside, rooter service Riverside CA, plumbing repair Riverside, toilet repair Riverside, garbage disposal Riverside, water heater Riverside CA">
+  <title>Services | Wateright Plumbing — Riverside CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a1628; --navy-mid: #0f2040; --blue: #1a6b8a;
+      --blue-light: #2196c4; --cyan: #00b4d8; --cyan-bright: #00d4ff;
+      --white: #ffffff; --off-white: #f0f4f8; --gray: #8a9bb0; --text: #d0dce8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 72px;
+      background: rgba(10,22,40,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,180,216,0.15);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--white); letter-spacing: 0.5px; line-height: 1.1; }
+    .nav-logo-text span { display: block; font-size: 0.65rem; font-weight: 400; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+    .nav-cta { background: var(--cyan); color: var(--navy) !important; padding: 10px 22px; border-radius: 4px; font-weight: 700 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--cyan-bright) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+    .page-hero {
+      padding: 140px 40px 80px;
+      background: linear-gradient(160deg, var(--navy-mid) 0%, var(--navy) 100%);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,180,216,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,216,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .page-hero .container { position: relative; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--white); margin-bottom: 16px; }
+    .page-hero h1 span { color: var(--cyan); }
+    .page-hero p { font-size: 1.05rem; color: var(--gray); max-width: 560px; line-height: 1.7; }
+
+    .services-section { padding: 80px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .service-block {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center; padding: 60px 0;
+      border-bottom: 1px solid rgba(0,180,216,0.08);
+    }
+    .service-block:last-child { border-bottom: none; }
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+
+    .service-block-icon { font-size: 4rem; margin-bottom: 20px; }
+    .service-block h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .service-block p { font-size: 0.95rem; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
+    .service-block-includes { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .service-block-includes li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text); }
+    .service-block-includes li::before { content: '✓'; color: var(--cyan); font-weight: 700; }
+    .service-price-tag {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: rgba(0,180,216,0.1); border: 1px solid rgba(0,180,216,0.25);
+      padding: 12px 20px; border-radius: 8px; margin-bottom: 20px;
+    }
+    .service-price-tag .price { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--cyan); }
+    .service-price-tag .price-label { font-size: 0.8rem; color: var(--gray); }
+
+    .service-visual {
+      background: rgba(15,32,64,0.8);
+      border: 1px solid rgba(0,180,216,0.15);
+      border-radius: 16px; padding: 48px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; min-height: 280px;
+      position: relative; overflow: hidden;
+    }
+    .service-visual::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,180,216,0.08) 0%, transparent 70%);
+    }
+    .service-visual-icon { font-size: 5rem; margin-bottom: 16px; position: relative; }
+    .service-visual-text { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); position: relative; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--cyan); color: var(--navy);
+      padding: 14px 28px; border-radius: 4px; font-weight: 700;
+      font-size: 0.95rem; text-decoration: none; transition: all 0.2s;
+    }
+    .btn-primary:hover { background: var(--cyan-bright); transform: translateY(-2px); }
+
+    .pricing-section {
+      padding: 80px 40px;
+      background: var(--navy-mid);
+    }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .section-title span { color: var(--cyan); }
+    .section-desc { font-size: 1rem; color: var(--gray); line-height: 1.7; margin-bottom: 48px; }
+
+    .pricing-table { width: 100%; border-collapse: collapse; }
+    .pricing-table th {
+      background: var(--blue); color: var(--white);
+      padding: 14px 20px; text-align: left;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem; font-weight: 700; letter-spacing: 1px;
+    }
+    .pricing-table th:first-child { border-radius: 8px 0 0 0; }
+    .pricing-table th:last-child { border-radius: 0 8px 0 0; }
+    .pricing-table td {
+      padding: 14px 20px; border-bottom: 1px solid rgba(0,180,216,0.08);
+      font-size: 0.92rem; color: var(--text);
+    }
+    .pricing-table tr:hover td { background: rgba(0,180,216,0.04); }
+    .pricing-table td.price { color: var(--cyan); font-weight: 700; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--navy-mid) 100%);
+      padding: 80px 40px; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,180,216,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,216,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .cta-section .container { position: relative; }
+    .cta-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .cta-section p { color: rgba(255,255,255,0.7); margin-bottom: 32px; font-size: 1rem; }
+    .cta-phone { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--cyan); text-decoration: none; display: block; margin-bottom: 24px; }
+
+    footer { background: #060e1a; padding: 40px; border-top: 1px solid rgba(0,180,216,0.1); text-align: center; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; font-size: 0.8rem; color: var(--gray); }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: var(--navy-mid); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(0,180,216,0.15); }
+      .page-hero { padding: 120px 20px 60px; }
+      .services-section { padding: 60px 20px; }
+      .service-block { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
+      .service-block.reverse { direction: ltr; }
+      .pricing-section { padding: 60px 20px; }
+      .cta-section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo-nav.png" alt="Wateright Plumbing Logo" style="width:44px;height:44px;border-radius:50%;">
+      <div class="nav-logo-text">WATERIGHT<span>Plumbing</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tel:9095773319" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">What We Offer</div>
+      <h1>Plumbing Services<br><span>Done Right</span></h1>
+      <p>From simple drain clogs to main line rooter work and minor plumbing repairs — Wateright handles it fast, honestly, and at a fair price.</p>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="container">
+
+      <div class="service-block reveal">
+        <div>
+          <div class="service-block-icon">🔧</div>
+          <h2>Drain Cleaning</h2>
+          <p>The most common plumbing problem in Riverside — and our specialty. We clear kitchen sink clogs, bathroom drains, tub and shower backups, and floor drains fast using professional snaking equipment.</p>
+          <ul class="service-block-includes">
+            <li>Kitchen sink drain cleaning</li>
+            <li>Bathroom sink, tub & shower drains</li>
+            <li>Floor drain clearing</li>
+            <li>Same day service available</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">From $79</div><div class="price-label">Upfront pricing, no surprises</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Book Service →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">🔧</div>
+          <div class="service-visual-text">Fast Drain Clearing<br>Same Day Available</div>
+        </div>
+      </div>
+
+      <div class="service-block reverse reveal">
+        <div>
+          <div class="service-block-icon">🌀</div>
+          <h2>Rooter Service</h2>
+          <p>Serious main line blockages, root intrusion, and stubborn clogs that a basic snake can't handle. We use professional floor snaking equipment to clear main lines and get your system flowing again.</p>
+          <ul class="service-block-includes">
+            <li>Main sewer line clearing</li>
+            <li>Root intrusion removal</li>
+            <li>Heavy duty blockage clearing</li>
+            <li>Apartment & commercial drain service</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">From $150</div><div class="price-label">Main line starting price</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Book Service →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">🌀</div>
+          <div class="service-visual-text">Main Line Specialist<br>Riverside & IE</div>
+        </div>
+      </div>
+
+      <div class="service-block reveal">
+        <div>
+          <div class="service-block-icon">🚽</div>
+          <h2>Toilet Repair & Unclog</h2>
+          <p>Clogged toilet? Running constantly? Leaking at the base? We handle toilet auger service, minor repairs, flapper replacements, and supply line work quickly and affordably.</p>
+          <ul class="service-block-includes">
+            <li>Toilet auger & unclogging</li>
+            <li>Flapper & fill valve replacement</li>
+            <li>Supply line replacement</li>
+            <li>Angle stop repair</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">From $99</div><div class="price-label">Most repairs same visit</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Book Service →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">🚽</div>
+          <div class="service-visual-text">Fast Toilet Repairs<br>No Mess Left Behind</div>
+        </div>
+      </div>
+
+      <div class="service-block reverse reveal">
+        <div>
+          <div class="service-block-icon">🔩</div>
+          <h2>Minor Plumbing Repairs</h2>
+          <p>Not every plumbing issue needs a massive contractor. We handle the smaller but just as important repairs that keep your home running right — faucets, supply lines, shower cartridges, and more.</p>
+          <ul class="service-block-includes">
+            <li>Faucet repair & replacement</li>
+            <li>Shower cartridge replacement</li>
+            <li>Angle stop & supply line replacement</li>
+            <li>Minor leak repairs</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">Call for Quote</div><div class="price-label">Honest upfront pricing always</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Get a Quote →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">🔩</div>
+          <div class="service-visual-text">Minor Repairs Done Right<br>Honest Pricing Always</div>
+        </div>
+      </div>
+
+      <div class="service-block reveal">
+        <div>
+          <div class="service-block-icon">♻️</div>
+          <h2>Garbage Disposal Service</h2>
+          <p>Jammed, humming, or completely dead — garbage disposal issues happen fast and mess up your whole kitchen. We diagnose and repair same day so you're back to normal quickly.</p>
+          <ul class="service-block-includes">
+            <li>Jam clearing & reset</li>
+            <li>Disposal repair</li>
+            <li>Leak diagnosis</li>
+            <li>Replacement when needed</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">From $85</div><div class="price-label">Property manager rate available</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Book Service →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">♻️</div>
+          <div class="service-visual-text">Disposal Fixed Fast<br>Same Day Available</div>
+        </div>
+      </div>
+
+      <div class="service-block reverse reveal">
+        <div>
+          <div class="service-block-icon">🔥</div>
+          <h2>Water Heater Maintenance</h2>
+          <p>Regular water heater maintenance extends your unit's life and keeps it running efficiently. We flush sediment buildup, inspect for issues, and keep your hot water flowing.</p>
+          <ul class="service-block-includes">
+            <li>Tank flushing & sediment removal</li>
+            <li>Full inspection & assessment</li>
+            <li>Efficiency check</li>
+            <li>Issue diagnosis & recommendation</li>
+          </ul>
+          <div class="service-price-tag">
+            <div><div class="price">From $85</div><div class="price-label">Includes full inspection</div></div>
+          </div>
+          <a href="tel:9095773319" class="btn-primary">Book Service →</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-icon">🔥</div>
+          <div class="service-visual-text">Water Heater Maintenance<br>Extend Your Unit's Life</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container reveal">
+      <div class="section-label">Transparent Pricing</div>
+      <h2 class="section-title">What You'll <span>Pay</span></h2>
+      <p class="section-desc">No hidden fees. No surprises. You know the price before we start.</p>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Starting Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Kitchen Sink Drain Cleaning</td><td class="price">$79</td></tr>
+          <tr><td>Bathroom / Tub / Shower Drain</td><td class="price">$79</td></tr>
+          <tr><td>Toilet Auger & Unclog</td><td class="price">$99</td></tr>
+          <tr><td>Floor Drain Cleaning</td><td class="price">$99</td></tr>
+          <tr><td>Main Line Rooter Service</td><td class="price">$150</td></tr>
+          <tr><td>Garbage Disposal Service</td><td class="price">$85</td></tr>
+          <tr><td>Water Heater Flush & Inspection</td><td class="price">$85</td></tr>
+          <tr><td>Minor Plumbing Repairs</td><td class="price">Call for Quote</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <div class="container">
+      <h2>Ready to Book?</h2>
+      <p>Call or text Jason directly. Same day service available.</p>
+      <a href="tel:9095773319" class="cta-phone">909-577-3319</a>
+      <a href="tel:9095773319" class="btn-primary">📞 Call Now</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px;">
+        <img src="logo-nav.png" alt="Wateright Plumbing" style="width:36px;height:36px;border-radius:50%;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--white);font-size:1.1rem;">WATERIGHT PLUMBING</span>
+      </div>
+      <p>© 2025 Wateright Plumbing — Riverside, CA | <a href="index.html" style="color:var(--cyan);text-decoration:none;">Home</a> · <a href="services.html" style="color:var(--cyan);text-decoration:none;">Services</a> · <a href="about.html" style="color:var(--cyan);text-decoration:none;">About</a> · <a href="contact.html" style="color:var(--cyan);text-decoration:none;">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

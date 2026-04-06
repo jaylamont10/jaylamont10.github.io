@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Wateright Plumbing in Riverside CA. Call or text 909-577-3319 for same day drain cleaning and plumbing service. Available 7 days a week.">
+  <title>Contact | Wateright Plumbing — Riverside CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0a1628;--navy-mid:#0f2040;--blue:#1a6b8a;--cyan:#00b4d8;--cyan-bright:#00d4ff;--white:#ffffff;--gray:#8a9bb0;--text:#d0dce8;}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--text);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:72px;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,180,216,0.15);}
+    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.3rem;color:var(--white);line-height:1.1;}
+    .nav-logo-text span{display:block;font-size:0.65rem;font-weight:400;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+    .nav-links a{color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:var(--cyan);color:var(--navy)!important;padding:10px 22px;border-radius:4px;font-weight:700!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);}
+    .page-hero{padding:140px 40px 80px;background:linear-gradient(160deg,var(--navy-mid) 0%,var(--navy) 100%);position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,216,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,0.04) 1px,transparent 1px);background-size:60px 60px;}
+    .page-hero .container{position:relative;max-width:1200px;margin:0 auto;}
+    .section-label{font-size:0.78rem;font-weight:700;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:var(--white);margin-bottom:16px;}
+    .page-hero h1 span{color:var(--cyan);}
+    .page-hero p{font-size:1.05rem;color:var(--gray);max-width:560px;line-height:1.7;}
+    .container{max-width:1200px;margin:0 auto;}
+    .contact-section{padding:80px 40px;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+    .contact-info h2{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;color:var(--white);margin-bottom:8px;}
+    .contact-info h2 span{color:var(--cyan);}
+    .contact-info p{font-size:0.95rem;color:var(--gray);line-height:1.7;margin-bottom:32px;}
+    .contact-methods{display:flex;flex-direction:column;gap:16px;}
+    .contact-method{display:flex;align-items:center;gap:16px;background:rgba(15,32,64,0.6);border:1px solid rgba(0,180,216,0.12);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;}
+    .contact-method:hover{border-color:var(--cyan);transform:translateX(4px);}
+    .contact-method-icon{font-size:1.8rem;width:48px;text-align:center;flex-shrink:0;}
+    .contact-method-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:2px;}
+    .contact-method-value{font-size:0.9rem;color:var(--cyan);font-weight:600;}
+    .contact-method-note{font-size:0.78rem;color:var(--gray);}
+    .hours-card{background:rgba(15,32,64,0.6);border:1px solid rgba(0,180,216,0.12);border-radius:12px;padding:28px;margin-top:24px;}
+    .hours-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+    .hours-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(0,180,216,0.06);font-size:0.88rem;}
+    .hours-row:last-child{border-bottom:none;}
+    .hours-row .day{color:var(--gray);}
+    .hours-row .time{color:var(--text);font-weight:600;}
+    .contact-form{background:rgba(15,32,64,0.8);border:1px solid rgba(0,180,216,0.15);border-radius:16px;padding:40px;}
+    .form-title{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:6px;}
+    .form-sub{font-size:0.85rem;color:var(--gray);margin-bottom:28px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{display:block;font-size:0.85rem;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:0.5px;}
+    .form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(10,22,40,0.8);border:1px solid rgba(0,180,216,0.2);border-radius:6px;padding:12px 16px;font-size:0.9rem;color:var(--white);font-family:'Barlow',sans-serif;transition:border-color 0.2s;outline:none;}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--cyan);}
+    .form-group textarea{min-height:120px;resize:vertical;}
+    .form-group select option{background:var(--navy-mid);}
+    .form-submit{width:100%;background:var(--cyan);color:var(--navy);padding:14px;border:none;border-radius:4px;font-weight:700;font-size:1rem;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:1px;transition:all 0.2s;}
+    .form-submit:hover{background:var(--cyan-bright);transform:translateY(-1px);}
+    .form-note{text-align:center;font-size:0.78rem;color:var(--gray);margin-top:10px;}
+    footer{background:#060e1a;padding:40px;border-top:1px solid rgba(0,180,216,0.1);text-align:center;}
+    .footer-bottom{max-width:1200px;margin:0 auto;font-size:0.8rem;color:var(--gray);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:900px){nav{padding:0 20px;}.nav-links{display:none;}.hamburger{display:flex;}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--navy-mid);padding:24px;gap:20px;border-bottom:1px solid rgba(0,180,216,0.15);}.page-hero{padding:120px 20px 60px;}.contact-section{padding:60px 20px;}.contact-grid{grid-template-columns:1fr;gap:40px;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo-nav.png" alt="Wateright Plumbing Logo" style="width:44px;height:44px;border-radius:50%;">
+      <div class="nav-logo-text">WATERIGHT<span>Plumbing</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="tel:9095773319" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h1>Let's Fix It<br><span>Today.</span></h1>
+      <p>Call, text, or send a message. Jason responds fast and same day service is available across Riverside and the Inland Empire.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info">
+            <h2>Reach Us<br><span>Anytime</span></h2>
+            <p>The fastest way to get service is always a call or text. We answer 7 days a week and can usually get to you same day.</p>
+            <div class="contact-methods">
+              <a href="tel:9095773319" class="contact-method">
+                <div class="contact-method-icon">📞</div>
+                <div>
+                  <div class="contact-method-title">Call or Text</div>
+                  <div class="contact-method-value">909-577-3319</div>
+                  <div class="contact-method-note">Fastest response — we always pick up</div>
+                </div>
+              </a>
+              <a href="mailto:info@waterightplumbing.com" class="contact-method">
+                <div class="contact-method-icon">✉️</div>
+                <div>
+                  <div class="contact-method-title">Email Us</div>
+                  <div class="contact-method-value">info@waterightplumbing.com</div>
+                  <div class="contact-method-note">We respond within a few hours</div>
+                </div>
+              </a>
+              <a href="https://www.waterightplumbing.com" class="contact-method">
+                <div class="contact-method-icon">📍</div>
+                <div>
+                  <div class="contact-method-title">Service Area</div>
+                  <div class="contact-method-value">Riverside, CA & Inland Empire</div>
+                  <div class="contact-method-note">We come to you — no shop visit needed</div>
+                </div>
+              </a>
+            </div>
+            <div class="hours-card">
+              <h4>Business Hours</h4>
+              <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">7:00 AM – 9:00 PM</span></div>
+              <div class="hours-row"><span class="day">Saturday</span><span class="time">7:00 AM – 9:00 PM</span></div>
+              <div class="hours-row"><span class="day">Sunday</span><span class="time">7:00 AM – 9:00 PM</span></div>
+              <div class="hours-row"><span class="day">Same Day Service</span><span class="time" style="color:var(--cyan);">Available</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <div class="form-title">Request Service</div>
+          <div class="form-sub">Fill out the form and we'll get back to you fast. For urgent issues call directly.</div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="First and last name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Best number to reach you" required>
+            </div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Drain Cleaning</option>
+                <option>Rooter / Main Line Service</option>
+                <option>Toilet Repair & Unclog</option>
+                <option>Minor Plumbing Repair</option>
+                <option>Garbage Disposal</option>
+                <option>Water Heater Maintenance</option>
+                <option>Not Sure — Need Assessment</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>City / Area</label>
+              <input type="text" placeholder="e.g. Riverside, Moreno Valley, Corona...">
+            </div>
+            <div class="form-group">
+              <label>Tell Us What's Going On</label>
+              <textarea placeholder="Brief description of the issue..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">SEND REQUEST</button>
+            <p class="form-note">Or call us directly at 909-577-3319 for fastest service</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px;">
+        <img src="logo-nav.png" alt="Wateright Plumbing" style="width:36px;height:36px;border-radius:50%;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--white);font-size:1.1rem;">WATERIGHT PLUMBING</span>
+      </div>
+      <p>© 2025 Wateright Plumbing — Riverside, CA | <a href="index.html" style="color:var(--cyan);text-decoration:none;">Home</a> · <a href="services.html" style="color:var(--cyan);text-decoration:none;">Services</a> · <a href="about.html" style="color:var(--cyan);text-decoration:none;">About</a> · <a href="contact.html" style="color:var(--cyan);text-decoration:none;">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+    function handleSubmit(e){
+      e.preventDefault();
+      alert('Thank you! We received your request and will call you back shortly. For fastest service call 909-577-3319 directly.');
+      e.target.reset();
+    }
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
